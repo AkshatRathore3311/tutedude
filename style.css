@@ -1,173 +1,156 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
 }
 
 body{
-    width: 100%;
+    width:100%;
 }
 
 nav{
-    width: 100%;
-    padding: 20px 50px;
+    padding:20px 50px;
 }
 
 .logo,
-.menu,
+.nav-links,
 .login{
-    display: inline-block;
-    vertical-align: middle;
+    display:inline-block;
+    vertical-align:middle;
 }
 
 .logo{
-    width: 20%;
+    width:20%;
 }
 
-.menu{
-    width: 55%;
-    text-align: center;
+.nav-links{
+    width:55%;
+    text-align:center;
 }
 
 .login{
-    width: 20%;
-    text-align: right;
+    width:20%;
+    text-align:right;
 }
 
-.menu a{
-    text-decoration: none;
-    color: gray;
-    margin: 0 10px;
-    font-size: 15px;
+.nav-links a{
+    text-decoration:none;
+    color:gray;
+    margin:0 12px;
 }
 
 .login button{
-    padding: 10px 20px;
-    border: none;
-    background: #dff2ff;
-    color: #2196f3;
-    border-radius: 5px;
-    cursor: pointer;
+    padding:10px 20px;
+    border:none;
+    background:#d9efff;
+    color:#2196f3;
+    border-radius:5px;
 }
 
 .hero{
-    width: 90%;
-    margin: 50px auto;
+    width:90%;
+    margin:40px auto;
 }
 
 .left,
 .right{
-    display: inline-block;
-    width: 48%;
-    vertical-align: middle;
+    display:inline-block;
+    width:48%;
+    vertical-align:middle;
 }
 
 .left h1{
-    font-size: 45px;
-    color: #444;
+    font-size:45px;
+    color:#444;
 }
 
 .left span{
-    color: #2196f3;
+    color:#2196f3;
 }
 
 .left p{
-    margin: 20px 0;
-    color: gray;
-    line-height: 25px;
+    margin:20px 0;
+    color:gray;
+    line-height:24px;
 }
 
 .left button{
-    padding: 14px 30px;
-    border: none;
-    background: #2196f3;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
+    padding:14px 28px;
+    border:none;
+    background:#2196f3;
+    color:white;
+    border-radius:5px;
 }
 
 .right{
-    text-align: center;
+    text-align:center;
 }
 
 .right img{
-    width: 70%;
+    width:70%;
 }
 
-@media (max-width: 768px){
+#menu{
+    display:none;
+}
 
-    nav{
-        padding: 20px;
-    }
+.menu-btn{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
 
-    .logo{
-        width: 25%;
-    }
+@media(max-width:768px){
 
-    .menu{
-        width: 45%;
+    .menu-btn{
+        display:inline-block;
+        float:right;
     }
 
     .login{
-        width: 25%;
+        display:none;
     }
 
-    .menu a{
-        margin: 0 5px;
-        font-size: 13px;
+    .nav-links{
+        display:none;
+        width:220px;
+        height:100vh;
+        background:black;
+        position:fixed;
+        top:0;
+        right:0;
+        padding-top:100px;
+        text-align:center;
     }
 
-    .left h1{
-        font-size: 32px;
+    .nav-links a{
+        display:block;
+        color:white;
+        margin:25px 0;
     }
 
-    .right img{
-        width: 90%;
-    }
-}
-
-@media (max-width: 480px){
-
-    nav{
-        padding: 15px;
-    }
-
-    .logo,
-    .menu,
-    .login{
-        display: block;
-        width: 100%;
-        text-align: center;
-        margin-bottom: 15px;
-    }
-
-    .menu a{
-        display: inline-block;
-        margin: 8px;
+    #menu:checked ~ .nav-links{
+        display:block;
     }
 
     .left,
     .right{
-        display: block;
-        width: 100%;
-        text-align: center;
+        display:block;
+        width:100%;
+        text-align:center;
     }
 
     .left h1{
-        font-size: 30px;
-    }
-
-    .left p{
-        width: 100%;
+        font-size:32px;
     }
 
     .right img{
-        width: 80%;
-        margin-top: 20px;
+        width:70%;
+        margin-top:30px;
     }
 
-    .left button{
-        width: 100%;
+    .left p{
+        width:100%;
     }
 }
