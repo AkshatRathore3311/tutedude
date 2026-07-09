@@ -10,51 +10,59 @@ body{
 }
 
 nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 40px;
+    padding:20px 50px;
 }
 
-.logo h2{
-    color:#333;
+.logo,
+.nav-links,
+.login{
+    display:inline-block;
+    vertical-align:middle;
 }
 
-.menu a{
+.logo{
+    width:20%;
+}
+
+.nav-links{
+    width:55%;
+    text-align:center;
+}
+
+.login{
+    width:20%;
+    text-align:right;
+}
+
+.nav-links a{
     text-decoration:none;
     color:gray;
-    margin:0 10px;
-    font-size:15px;
+    margin:0 12px;
 }
 
 .login button{
-    padding:8px 18px;
+    padding:10px 20px;
     border:none;
-    background:#d8ecff;
+    background:#d9efff;
     color:#2196f3;
     border-radius:5px;
 }
 
 .hero{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:50px 40px;
+    width:90%;
+    margin:40px auto;
 }
 
-.left{
-    width:50%;
-}
-
+.left,
 .right{
-    width:50%;
-    text-align:center;
+    display:inline-block;
+    width:48%;
+    vertical-align:middle;
 }
 
 .left h1{
-    font-size:42px;
+    font-size:45px;
     color:#444;
-    margin-bottom:20px;
 }
 
 .left span{
@@ -62,38 +70,76 @@ nav{
 }
 
 .left p{
+    margin:20px 0;
     color:gray;
-    line-height:25px;
-    margin-bottom:25px;
-    width:80%;
+    line-height:24px;
 }
 
 .left button{
-    padding:12px 25px;
+    padding:14px 28px;
+    border:none;
     background:#2196f3;
     color:white;
-    border:none;
     border-radius:5px;
-    cursor:pointer;
+}
+
+.right{
+    text-align:center;
 }
 
 .right img{
     width:70%;
 }
 
-@media screen and (max-width:768px){
+#menu{
+    display:none;
+}
 
-    nav{
-        padding:20px;
+.menu-btn{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+@media(max-width:768px){
+
+  .menu-btn{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+    .login{
+        display:none;
     }
 
-    .menu a{
-        margin:0 5px;
-        font-size:13px;
+    .nav-links{
+        display:none;
+        width:220px;
+        height:100vh;
+        background:black;
+        position:fixed;
+        top:0;
+        right:0;
+        padding-top:100px;
+        text-align:center;
     }
 
-    .hero{
-        padding:30px 20px;
+    .nav-links a{
+        display:block;
+        color:white;
+        margin:25px 0;
+    }
+
+    #menu:checked ~ .nav-links{
+        display:block;
+    }
+
+    .left,
+    .right{
+        display:block;
+        width:100%;
+        text-align:center;
     }
 
     .left h1{
@@ -101,49 +147,11 @@ nav{
     }
 
     .right img{
-        width:85%;
-    }
-
-}
-
-@media screen and (max-width:480px){
-
-    nav{
-        flex-direction:column;
-        gap:15px;
-    }
-
-    .menu{
-        display:flex;
-        gap:12px;
-        flex-wrap:wrap;
-        justify-content:center;
-    }
-
-    .hero{
-        flex-direction:column;
-        text-align:center;
-    }
-
-    .left{
-        width:100%;
-    }
-
-    .right{
-        width:100%;
+        width:70%;
         margin-top:30px;
     }
 
     .left p{
         width:100%;
     }
-
-    .left button{
-        width:100%;
-    }
-
-    .right img{
-        width:75%;
-    }
-
 }
